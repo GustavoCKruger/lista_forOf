@@ -7,21 +7,22 @@
 
     //ENTRADA
     let listaDeNomes = ["João", "Maria", "José", "Amanda", "Beatriz", "Júlio", "Olívia"];
-    const joao = prompt("Informe se o nome João é Masculino(M) ou Feminino(F)");
-    const maria = prompt("Informe se o nome Maria é Masculino(M) ou Feminino(F)");
-    const jose = prompt("Informe se o nome José é Masculino(M) ou Feminino(F)");
-    const amanda = prompt("Informe se o nome Amanda é Masculino(M) ou Feminino(F)");
-    const beatriz = prompt("Informe se o nome Beatriz é Masculino(M) ou Feminino(F)");
-    const julio = prompt("Informe se o nome Júlio é Masculino(M) ou Feminino(F)");
-    const olivia = prompt("Informe se o nome Olívia é Masculino(M) ou Feminino(F)");
 
     //PROCESSAMENTO
     let Masculino = [];
     let Feminino = [];
 
-    for (let item of object) {
-        
+    for (let item of listaDeNomes) {
+        const genero = prompt(`Informe se ${item} o genero M-masculino e F-feminino`).trim().toUpperCase();
+        if(genero == "M"){
+            Masculino.push(item);
+            alert(`${Masculino.join(" - ")}`)
+        }
+        else{
+            Feminino.push(item);
+            alert(`${Feminino.join("-")}`);
+        }
     }
     //SAÍDA
-
+    alert(`Masculinos: ${Masculino.join(" - ")} \n Femininos: ${Feminino.join(" - ")}`)
 </script>
